@@ -3,22 +3,26 @@
   "version": "1.0",
   "slug": "lirc",
   "description": "LIRC (Linux Infrared Remote Control) Add-on for Home Assistant",
-  "url": "https://github.com/wozt/lirc-addon-hass-amd64",
+  "url": "https://github.com/wozt/lirc-addon-hass-arm64",
   "startup": "application",
   "boot": "auto",
   "host_network": true,
   "map": ["config:rw", "addons:rw"],
   "ports": {
-    "8765/tcp": "8765",
-    "3000/tcp": "3000"
+    "8765/tcp": 8765,
+    "3000/tcp": 3000
   },
-  "arch": ["amd64"],
+  "arch": ["aarch64"],
   "privileged": [
     "SYS_RAWIO",
     "SYS_ADMIN"
   ],
-  "devices": [
-    "/dev/bus/usb/009/003:/dev/bus/usb/009/003:rwm"
-  ]
+  "udev": true,
+  "devices": [],
+  "options": {
+    "device": null
+  },
+  "schema": {
+    "device": "device?"
+  }
 }
-
