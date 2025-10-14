@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.22
 
 # Installer les paquets nécessaires pour la compilation et LIRC
 RUN apk add --no-cache gcc build-base libusb-dev lirc-dev linux-headers git lirc nodejs npm
