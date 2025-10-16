@@ -1,5 +1,5 @@
 docker run -d \
-  --name lirc-addon-haos_amd64 \
+  --name lirc-addon-hass-amd64 \
   --privileged \
   --device /dev/bus/usb/001/003:/dev/bus/usb/001/003:rwm \
   -p 8765:8765 \
